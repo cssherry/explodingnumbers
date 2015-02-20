@@ -14,10 +14,23 @@ The game should be a tetris of numbers.
 
 ## Design Docs
 ### Classes
-* View
+* Util
+  * Defines inheritance
+  * **Functions**: inherits
+* MovingObject
+  * **Functions**: fall, isAtBottom, stopFall
+* Numbers
+  * Inherits from Moving Objects
+  * **Functions**: setUpView, startGame, endGame
 * Game
+  * Holds the logic for what defines a step, when a game ends
+  * **Functions**: run, createTurn, endTurn
 * FallingScreen
+  * Holds the falling numbers
+  * **Functions**: makeScreen, isEmptyPos, addNumber, moveNumber
 * Equation
+  * Holds the logic for generating random equations
+  * Functions: checkAnswer
 
 ## Implementation Timeline
 
@@ -28,9 +41,10 @@ Make the falling numbers and initial layer of numbers. Display this on the scree
 Make random equations show up on page. These equations will differ depending on difficulty.
 
 ### Phase 3: Enable clicking of numbers (~0.5 day)
-Use jQuery UI to make each number clickable, also register the number that is clicked. 
+Use jQuery UI to make each number clickable, also register the number that is clicked.
 
 ### Bonus Features
+- [ ] Random bombs to clear all instances of a random number.
 - [ ] Point system based on difficulty and final score can be saved.
 - [ ] Two modes, default mode ends game when numbers reach top of screen, timer method will return score at the end of 5 minutes.
 
