@@ -66,9 +66,7 @@
       var canvasEl = document.getElementById("falling-screen");
       canvasEl.height = window.innerHeight - 50;
       canvasEl.width = window.innerWidth;
-      var newGame = new Asteroids.Game(canvasEl.width, canvasEl.height, 5);
-      var asteroid = new Asteroids.Asteroid([50,50]);
-      var movingObject = new Asteroids.MovingObjects([50,50], [50,50], 50, "red");
+      var newGame = new ExplodingNumbers.Game(canvasEl.width, canvasEl.height,10);
       var newView = new Asteroids.GameView(newGame, canvasEl);
       newView.start();
     </script>
