@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chess game originally implemented in Ruby">
+    <meta name="description" content="Exploding Number Operations Game">
     <meta name="author" content="Sherry Zhou">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-    <title> Chess </title>
+    <title> Exploding Numbers </title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -16,13 +16,10 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/animate-custom.css" rel="stylesheet">
 
-
-
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
     <script src="assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="http://cssherry.tumblr.com/api/read/json"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
@@ -56,8 +53,25 @@
 
     <!-- Game display
     ================================================== -->
+    <h1>Let's Explode Some Numbers!</h1>
 
-
+    <canvas id="falling-screen"></canvas>
+    <script src="./lib/util.js"></script>
+    <script src="./lib/movingObject.js"></script>
+    <script src="./lib/number.js"></script>
+    <script src="./lib/equations.js"></script>
+    <script src="./lib/game.js"></script>
+    <script src="./lib/fallingScreen.js"></script>
+    <script>
+      var canvasEl = document.getElementById("falling-screen");
+      canvasEl.height = window.innerHeight - 50;
+      canvasEl.width = window.innerWidth;
+      var newGame = new Asteroids.Game(canvasEl.width, canvasEl.height, 5);
+      var asteroid = new Asteroids.Asteroid([50,50]);
+      var movingObject = new Asteroids.MovingObjects([50,50], [50,50], 50, "red");
+      var newView = new Asteroids.GameView(newGame, canvasEl);
+      newView.start();
+    </script>
 
     <footer class="navbar navbar-default navbar-bottom" role="navigation">
   			<p> <a href="http://www.cssherry.com/">Contact</a> | <a href="https://github.com/zhoux10/chess/tree/gh-pages">Visit on Github</a> | © 2015 - Today </p>
