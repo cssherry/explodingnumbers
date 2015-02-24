@@ -67,7 +67,7 @@
       var canvasEl = document.getElementById("falling-screen");
       canvasEl.height = window.innerHeight - 50;
       canvasEl.width = window.innerWidth;
-      var newGame = new ExplodingNumbers.Game(canvasEl.width, canvasEl.height,10);
+      var newGame = new ExplodingNumbers.Game(canvasEl.width, canvasEl.height, 10);
       var newView = new ExplodingNumbers.GameView(newGame, canvasEl);
       $(canvasEl).css("background-color", "black")
       newView.start();
