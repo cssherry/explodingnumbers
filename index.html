@@ -69,7 +69,7 @@
       canvasEl.width = window.innerWidth;
       var newGame = new ExplodingNumbers.Game(canvasEl.width, canvasEl.height,10);
       var newView = new ExplodingNumbers.GameView(newGame, canvasEl);
-      $(canvasEl).css("background-color", "lightblue")
+      $(canvasEl).css("background-color", "black")
       newView.start();
       document.getElementById("game-pause").addEventListener("click", newView.pauseClick.bind(newView), true)
     </script>
