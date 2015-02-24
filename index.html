@@ -54,6 +54,7 @@
     ================================================== -->
     <h1 class="centered">Let's Explode Some Numbers!</h1>
     <hr>
+    <h2><button type="button" class="btn btn-default center-block" id="game-pause">Pause Game</button></h2>
 
     <canvas id="falling-screen">Your browser does not support the HTML5 canvas tag.</canvas>
     <script src="./lib/util.js"></script>
@@ -68,7 +69,9 @@
       canvasEl.width = window.innerWidth;
       var newGame = new ExplodingNumbers.Game(canvasEl.width, canvasEl.height,10);
       var newView = new ExplodingNumbers.GameView(newGame, canvasEl);
+      $(canvasEl).css("background-color", "lightblue")
       newView.start();
+      document.getElementById("game-pause").addEventListener("click", newView.pauseClick.bind(newView), true)
     </script>
 
     <footer class="navbar navbar-default navbar-bottom" role="navigation">
