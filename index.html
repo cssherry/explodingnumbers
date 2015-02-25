@@ -54,12 +54,15 @@
     <hr>
     <h2><button type="button" class="btn btn-default center-block" id="game-pause">Pause Game</button></h2>
 
+    <canvas id="falling-screen">Your browser does not support the HTML5 canvas tag.</canvas>
+
     <footer class="navbar navbar-default navbar-bottom" role="navigation">
   			<p> <a href="http://www.cssherry.com/">Contact</a> | <a href="https://github.com/zhoux10/explodingnumbers">Visit on Github</a> | © 2015 - Today </p>
     </footer>
 
     <script src="assets/js/jquery.min.js"></script>
-    <canvas id="falling-screen">Your browser does not support the HTML5 canvas tag.</canvas>
+    <script src="assets/js/fabric.min.js"></script>
+
     <script src="./lib/util.js"></script>
     <script src="./lib/movingObject.js"></script>
     <script src="./lib/number.js"></script>
@@ -67,13 +70,11 @@
     <script src="./lib/game.js"></script>
     <script src="./lib/fallingScreen.js"></script>
     <script>
-      var canvasEl = document.getElementById("falling-screen");
-      canvasEl.height = window.innerHeight - 50;
-      canvasEl.width = window.innerWidth;
-      var newGame = new ExplodingNumbers.Game(canvasEl.width, canvasEl.height, 10);
-      var newView = new ExplodingNumbers.GameView(newGame, canvasEl);
-      $(canvasEl).css("background-color", "black")
-      newView.start();
+      var height = window.innerHeight - 50;
+      var width = window.innerWidth;
+      var newGame = new ExplodingNumbers.Game(width, height, 10);
+      var newView = new ExplodingNumbers.GameView(newGame, 'falling-screen');
+
       document.getElementById("game-pause").addEventListener("click", newView.pauseClick.bind(newView), true)
     </script>
 
