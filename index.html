@@ -10,15 +10,13 @@
     <title> Exploding Numbers </title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.min.css" rel="stylesheet">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
-    <script src="assets/js/jquery.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
@@ -56,6 +54,11 @@
     <hr>
     <h2><button type="button" class="btn btn-default center-block" id="game-pause">Pause Game</button></h2>
 
+    <footer class="navbar navbar-default navbar-bottom" role="navigation">
+  			<p> <a href="http://www.cssherry.com/">Contact</a> | <a href="https://github.com/zhoux10/explodingnumbers">Visit on Github</a> | © 2015 - Today </p>
+    </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
     <canvas id="falling-screen">Your browser does not support the HTML5 canvas tag.</canvas>
     <script src="./lib/util.js"></script>
     <script src="./lib/movingObject.js"></script>
@@ -74,17 +77,12 @@
       document.getElementById("game-pause").addEventListener("click", newView.pauseClick.bind(newView), true)
     </script>
 
-    <footer class="navbar navbar-default navbar-bottom" role="navigation">
-  			<p> <a href="http://www.cssherry.com/">Contact</a> | <a href="https://github.com/zhoux10/explodingnumbers">Visit on Github</a> | © 2015 - Today </p>
-    </footer>
-
       <!-- Bootstrap core JavaScript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
 
 
   	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-  	<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

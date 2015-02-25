@@ -7,10 +7,10 @@
 ## Minimum Viable Product
 The game should be a tetris of numbers.
 
-- [ ] Numbers fall and there is an initial layer of numbers on floor
-- [ ] Game displays random arithmetic operations (+, -, /, and *) with answers that can be created from fallen numbers.
+- [X] Numbers fall and there is an initial layer of numbers on floor
+- [X] Game displays random arithmetic operations (+, -, /, and *) with answers that can be created from fallen numbers.
 - [ ] Fallen/falling numbers should be clickable. Difficulty increases with every successful click.
-- [ ] Difficulty is defined by quicker falling rate and larger numbers.
+- [X] Difficulty is defined by quicker falling rate and larger numbers.
 
 ## Design Docs
 ### Classes
@@ -54,4 +54,5 @@ Use jQuery UI to make each number clickable, also register the number that is cl
   - jQuery UI
 - AJAX
 - YAML to save scores
+- Library such as [Fabric.js](http://fabricjs.com/fabric-intro-part-1/) for making Canvas items interactive.
 ### Canvas
