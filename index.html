@@ -70,11 +70,19 @@
     <script src="./lib/game.js"></script>
     <script src="./lib/fallingScreen.js"></script>
     <script>
-      var height = window.innerHeight - 50;
-      var width = window.innerWidth;
+      var height = window.innerHeight - 150;
+      var width = window.innerWidth * 0.8;
       var newGame = new ExplodingNumbers.Game(width, height, 10);
-      var newView = new ExplodingNumbers.GameView(newGame, 'falling-screen');
+      var newView = new ExplodingNumbers.GameView(newGame, 'falling-screen', width, height);
+      newView.start();
 
+      // window.addEventListener('resize', resizeCanvas, false);
+      //
+      // function resizeCanvas() {
+      //   $("#falling-screen").setHeight(window.innerHeight);
+      //   $("#falling-screen").setWidth(window.innerWidth);
+      //   $("#falling-screen").renderAll();
+      // }
       // document.getElementById("game-pause").addEventListener("click", newView.pauseClick.bind(newView), true)
     </script>
 

@@ -27,6 +27,10 @@ body {
     margin-top: 80px;
 }
 
+.canvas-container {
+  margin: 0 auto;
+}
+
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   background-color: #eeeeee !important;
   color: black !important;
@@ -115,6 +119,11 @@ body {
 
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 100%;
 }
 
 .col-md-4 {
