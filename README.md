@@ -9,7 +9,7 @@ The game should be a tetris of numbers.
 
 - [X] Numbers fall and there is an initial layer of numbers on floor
 - [X] Game displays random arithmetic operations (+, -, /, and *) with answers that can be created from fallen numbers.
-- [ ] Fallen/falling numbers should be clickable. Difficulty increases with every successful click.
+- [X] Fallen/falling numbers should be clickable. Difficulty increases with every successful click.
 - [X] Difficulty is defined by quicker falling rate and larger numbers.
 
 ## Design Docs
