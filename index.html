@@ -76,13 +76,6 @@
       var newView = new ExplodingNumbers.GameView(newGame, 'falling-screen', width, height);
       newView.start();
 
-      // window.addEventListener('resize', resizeCanvas, false);
-      //
-      // function resizeCanvas() {
-      //   $("#falling-screen").setHeight(window.innerHeight);
-      //   $("#falling-screen").setWidth(window.innerWidth);
-      //   $("#falling-screen").renderAll();
-      // }
       document.getElementById("game-pause").addEventListener("click", newView.pauseClick.bind(newView), true)
     </script>
 
