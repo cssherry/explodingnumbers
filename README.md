@@ -14,23 +14,27 @@ The game should be a tetris of numbers.
 
 ## Design Docs
 ### Classes
-* Util
-  * Defines inheritance
+* [Util][util]
+  * Defines inheritance and some equations common to the other classes (like random number generator and random color generator)
   * **Functions**: inherits
-* MovingObject
-  * **Functions**: fall, isAtBottom, stopFall
-* Numbers
-  * Inherits from Moving Objects
-  * **Functions**: setUpView, startGame, endGame
-* Game
-  * Holds the logic for what defines a step, when a game ends
-  * **Functions**: run, createTurn, endTurn
-* FallingScreen
-  * Holds the falling numbers
-  * **Functions**: makeScreen, isEmptyPos, addNumber, moveNumber
-* Equation
+* [MovingObject][movingObject]
+  * Holds main functionality of making the moving class (defining a fabric.js object, finding it's position, and moving it downward)
+* [Numbers][numbers]
+  * Inherits from Moving Objects. Originally intended to make transition to making a bomb class easier
+* [Game][game]
+  * Holds the logic for how to move an object down, how to check answers selected by the user, and when a game ends
+* [Equation][equation]
   * Holds the logic for generating random equations
-  * Functions: checkAnswer
+* [FallingScreen][falling-screen]
+  * Holds instances of the game, equation, and has logic for starting the game.
+
+  [falling-screen]: ./lib/fallingScreen.js
+  [equation]: ./lib/equations.js
+  [game]: ./lib/game.js
+  [numbers]: ./lib/number.js
+  [movingObject]: ./lib/movingObject.js
+  [util]: ./lib/util.js
+
 
 ## Implementation Timeline
 
@@ -53,6 +57,5 @@ Use jQuery UI to make each number clickable, also register the number that is cl
 - jQuery
   - jQuery UI
 - AJAX
-- YAML to save scores
-- Library such as [Fabric.js](http://fabricjs.com/fabric-intro-part-1/) for making Canvas items interactive.
+- Library such as [Fabric.js](http://fabricjs.com/fabric-intro-part-1/) for making Canvas items interactive (clickable).
 ### Canvas
