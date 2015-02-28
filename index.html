@@ -31,7 +31,7 @@
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            +
+            <span class="glyphicon glyphicon-plus"></span>
           </button>
         </div>
         <div class="collapse navbar-collapse">
@@ -54,7 +54,7 @@
     <hr>
 
     <p class='centered'>
-      Answer the equations by clicking on the answer digit-by-digit. If you accidentally click a number, just click it again to unselect it.
+      Answer the equations at the top of the black screen by clicking on the answer <b>digit-by-digit</b>. If you accidentally click a number, just click it again to unselect it.
     </p>
 
     <p class='centered'>
@@ -65,7 +65,11 @@
       Win by clearing out the bottom row of numbers
     </p>
 
-    <h2><button type="button" class="btn btn-default center-block" id="game-pause">Pause Game</button></h2>
+    <div class="row">
+      <h1 class="col-xs-11">
+        <button type="button" class="btn btn-default pull-right" id="game-pause"><span class="glyphicon glyphicon-pause"></span></button>
+      </h1>
+    </div>
 
     <canvas id="falling-screen">Your browser does not support the HTML5 canvas tag.</canvas>
 
