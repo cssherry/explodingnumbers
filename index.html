@@ -69,10 +69,10 @@
       <div class="col-xs-8 col-xs-offset-1">
         <b>Included Operations:</b>
         <p>
-          <button type="button" class="btn btn-success operations" id="+">+</button>
-          <button type="button" class="btn btn-success operations" id="-">-</button>
-          <button type="button" class="btn btn-success operations" id="/">/</button>
-          <button type="button" class="btn btn-success operations" id="*">*</button>
+          <button type="button" class="btn btn-success operations active" id="+">+</button>
+          <button type="button" class="btn btn-success operations active" id="-">-</button>
+          <button type="button" class="btn btn-success operations active" id="/">/</button>
+          <button type="button" class="btn btn-success operations active" id="*">*</button>
         </p>
       </div>
       <div class="col-xs-2">
@@ -102,11 +102,15 @@
     <script>
       var height = window.innerHeight - 150;
       var width = window.innerWidth * 0.8;
-      var newGame = new ExplodingNumbers.Game(width, height, 10);
+      var newGame = new ExplodingNumbers.Game(width, height, 10, ['+', '-', '*', '/']);
       var newView = new ExplodingNumbers.GameView(newGame, 'falling-screen', width, height);
       newView.start();
 
       document.getElementById("game-pause").addEventListener("click", newView.pauseClick.bind(newView), true)
+      document.getElementById("+").addEventListener("click", newView.selectOperation.bind(newView), true)
+      document.getElementById("-").addEventListener("click", newView.selectOperation.bind(newView), true)
+      document.getElementById("/").addEventListener("click", newView.selectOperation.bind(newView), true)
+      document.getElementById("*").addEventListener("click", newView.selectOperation.bind(newView), true)
     </script>
 
       <!-- Bootstrap core JavaScript
