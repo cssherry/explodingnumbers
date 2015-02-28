@@ -2,7 +2,7 @@
 
 [Website][website]
 
-[website]: http://www.cssherry.com/exploding_numbers
+[website]: http://www.cssherry.com/explodingnumbers
 
 ## Minimum Viable Product
 The game should be a tetris of numbers.
